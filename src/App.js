@@ -42,26 +42,26 @@ function App() {
 
   return (
     <div>
-      <input type='text'  onChange={handleChange} value={data}/>
+      <input type='text'  onChange={handleChange} value={data} placeholder='Enter city name'/>
       <button onClick={handleSearch}>Search</button>
 
-      {isLoading ? <p>Loading data ...</p>: 
+      {isLoading ? <p>Loading data...</p>: 
       <>
       {cityData ?
       <div> 
-        <div className='weather-card'>
+        <div className='weather-cards'>
           <h2>Temperature</h2>
           <p>{cityData.current.temp_c} C</p>
         </div>
-        <div className='weather-card'>
+        <div className='weather-cards'>
           <h2>Humidity</h2>
           <p>{cityData.current.humidity} %</p>
         </div>
-        <div className='weather-card'>
+        <div className='weather-cards'>
           <h2>Condition</h2>
           <p>{cityData.current.condition.text}</p>
         </div>
-        <div className='weather-card'>
+        <div className='weather-cards'>
           <h2>Wind Speed</h2>
           <p>{cityData.current.wind_kph} kph</p>
         </div>
