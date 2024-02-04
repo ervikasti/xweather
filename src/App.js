@@ -48,20 +48,20 @@ function App() {
       {isLoading ? <p>Loading data...</p>: 
       <>
       {cityData ?
-      <div> 
-        <div className='weather-cards'>
+      <div className='weather-cards'> 
+        <div className='weather-card'>
           <h2>Temperature</h2>
           <p>{cityData.current.temp_c} C</p>
         </div>
-        <div className='weather-cards'>
+        <div className='weather-card'>
           <h2>Humidity</h2>
           <p>{cityData.current.humidity} %</p>
         </div>
-        <div className='weather-cards'>
+        <div className='weather-card'>
           <h2>Condition</h2>
           <p>{cityData.current.condition.text}</p>
         </div>
-        <div className='weather-cards'>
+        <div className='weather-card'>
           <h2>Wind Speed</h2>
           <p>{cityData.current.wind_kph} kph</p>
         </div>
